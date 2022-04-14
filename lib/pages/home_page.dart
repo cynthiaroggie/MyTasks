@@ -21,12 +21,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: _deviceHeight * 0.15,
-        title: Text(
+        title: const Text(
           "My Tasks",
           style: TextStyle(fontSize: 25),
         ),
       ),
       body: _taskList(),
+      floatingActionButton: _addTaskButton(),
     );
   }
 }
@@ -45,5 +46,14 @@ Widget _taskList() {
             const Icon(Icons.check_box_outlined, color: Colors.blueAccent),
       ),
     ],
+  );
+}
+
+Widget _addTaskButton() {
+  return FloatingActionButton(
+    onPressed: () {},
+    child: const Icon(
+      Icons.add,
+    ),
   );
 }
