@@ -26,6 +26,24 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 25),
         ),
       ),
+      body: _taskList(),
     );
   }
+}
+
+Widget _taskList() {
+  return ListView(
+    children: [
+      ListTile(
+        title: const Text(
+          "1. Coldroom monitoring",
+          style:
+              TextStyle(decoration: TextDecoration.lineThrough, fontSize: 22),
+        ),
+        subtitle: Text(DateTime.now().toString()),
+        trailing:
+            const Icon(Icons.check_box_outlined, color: Colors.blueAccent),
+      ),
+    ],
+  );
 }
