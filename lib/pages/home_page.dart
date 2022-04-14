@@ -51,9 +51,18 @@ Widget _taskList() {
 
 Widget _addTaskButton() {
   return FloatingActionButton(
-    onPressed: () {},
+    onPressed: _displayTaskPopup,
     child: const Icon(
       Icons.add,
     ),
+  );
+}
+
+void _displayTaskPopup() {
+  showDialog(
+    context: context,
+    builder: (BuildContext _context) {
+      return AlertDialog();
+    },
   );
 }
